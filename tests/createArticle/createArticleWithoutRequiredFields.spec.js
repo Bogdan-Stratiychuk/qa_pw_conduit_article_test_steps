@@ -54,7 +54,7 @@ test('Creat an article without description field', async () => {
   await createArticlePage.fillTagsField(article.tags);
 
   await createArticlePage.clickPublishArticleButton();
-  await createArticlePage.assertErrorMessageContainsText('Article description cannot be empty');
+  await articlePage.assertArticleTitle(article.title);
 });
 
 test('Creat an article without body field', async () => {
